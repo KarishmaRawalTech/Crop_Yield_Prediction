@@ -4,17 +4,17 @@ import seaborn as sns
 import streamlit as st
 import numpy as np
 
-def main():
-    st.markdown('## 🌿💡 Agri-Analytics: Forecasting Yields from Soil to Sun 🌞💧')
-# Load dataset
-    @st.cache_data
-    def load_data():
-    # Replace 'your_dataset.csv' with the actual file name
-        return pd.read_csv('agricultural_yield_train.csv')
 
-    data = load_data()
+st.markdown('## 🌿💡 Agri-Analytics: Forecasting Yields from Soil to Sun 🌞💧')
+# Load dataset
+@st.cache_data
+def load_data():
+    # Replace 'your_dataset.csv' with the actual file name
+    return pd.read_csv('agricultural_yield_train.csv')
+
+data = load_data()
  
-    st.markdown("""
+st.markdown("""
     ## Dataset Columns Description 🌾📋  
 
     | **Column Name**                          | **Description**                                                                                     |  
